@@ -7,7 +7,7 @@ servers:
   -
     url: 'http://127.0.0.1:8000'
 paths:
-  /api/comment:
+  /api/v1/comment:
     post:
       summary: 'Create comment.'
       operationId: createComment
@@ -40,7 +40,7 @@ paths:
                 - comment
                 - movie_id
       security: []
-  /api/movie:
+  /api/v1/movie:
     get:
       summary: 'Get all movies.'
       operationId: getAllMovies
@@ -88,33 +88,49 @@ paths:
                         cover_image: null
                         author: 'Cyrus Voris, Ethan Reiff'
                         imdb_rating: 0
-                    first_page_url: 'http://127.0.0.1:8000/api/movie?page=1'
+                    first_page_url: 'http://127.0.0.1:8000/api/v1/movie?page=1'
                     from: 1
-                    last_page: 2
-                    last_page_url: 'http://127.0.0.1:8000/api/movie?page=2'
+                    last_page: 6
+                    last_page_url: 'http://127.0.0.1:8000/api/v1/movie?page=6'
                     links:
                       -
                         url: null
                         label: '&laquo; Previous'
                         active: false
                       -
-                        url: 'http://127.0.0.1:8000/api/movie?page=1'
+                        url: 'http://127.0.0.1:8000/api/v1/movie?page=1'
                         label: '1'
                         active: true
                       -
-                        url: 'http://127.0.0.1:8000/api/movie?page=2'
+                        url: 'http://127.0.0.1:8000/api/v1/movie?page=2'
                         label: '2'
                         active: false
                       -
-                        url: 'http://127.0.0.1:8000/api/movie?page=2'
+                        url: 'http://127.0.0.1:8000/api/v1/movie?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/v1/movie?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/v1/movie?page=5'
+                        label: '5'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/v1/movie?page=6'
+                        label: '6'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/v1/movie?page=2'
                         label: 'Next &raquo;'
                         active: false
-                    next_page_url: 'http://127.0.0.1:8000/api/movie?page=2'
-                    path: 'http://127.0.0.1:8000/api/movie'
+                    next_page_url: 'http://127.0.0.1:8000/api/v1/movie?page=2'
+                    path: 'http://127.0.0.1:8000/api/v1/movie'
                     per_page: 5
                     prev_page_url: null
                     to: 5
-                    total: 10
+                    total: 29
                 properties:
                   status:
                     type: string
@@ -178,16 +194,16 @@ paths:
                               example: 0
                       first_page_url:
                         type: string
-                        example: 'http://127.0.0.1:8000/api/movie?page=1'
+                        example: 'http://127.0.0.1:8000/api/v1/movie?page=1'
                       from:
                         type: integer
                         example: 1
                       last_page:
                         type: integer
-                        example: 2
+                        example: 6
                       last_page_url:
                         type: string
-                        example: 'http://127.0.0.1:8000/api/movie?page=2'
+                        example: 'http://127.0.0.1:8000/api/v1/movie?page=6'
                       links:
                         type: array
                         example:
@@ -196,15 +212,31 @@ paths:
                             label: '&laquo; Previous'
                             active: false
                           -
-                            url: 'http://127.0.0.1:8000/api/movie?page=1'
+                            url: 'http://127.0.0.1:8000/api/v1/movie?page=1'
                             label: '1'
                             active: true
                           -
-                            url: 'http://127.0.0.1:8000/api/movie?page=2'
+                            url: 'http://127.0.0.1:8000/api/v1/movie?page=2'
                             label: '2'
                             active: false
                           -
-                            url: 'http://127.0.0.1:8000/api/movie?page=2'
+                            url: 'http://127.0.0.1:8000/api/v1/movie?page=3'
+                            label: '3'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/v1/movie?page=4'
+                            label: '4'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/v1/movie?page=5'
+                            label: '5'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/v1/movie?page=6'
+                            label: '6'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/v1/movie?page=2'
                             label: 'Next &raquo;'
                             active: false
                         items:
@@ -221,10 +253,10 @@ paths:
                               example: false
                       next_page_url:
                         type: string
-                        example: 'http://127.0.0.1:8000/api/movie?page=2'
+                        example: 'http://127.0.0.1:8000/api/v1/movie?page=2'
                       path:
                         type: string
-                        example: 'http://127.0.0.1:8000/api/movie'
+                        example: 'http://127.0.0.1:8000/api/v1/movie'
                       per_page:
                         type: integer
                         example: 5
@@ -236,7 +268,7 @@ paths:
                         example: 5
                       total:
                         type: integer
-                        example: 10
+                        example: 29
       tags:
         - 'Movie Operations.'
       security: []
@@ -304,7 +336,7 @@ paths:
                 - summary
                 - genres
                 - author
-  '/api/movie/{id}':
+  '/api/v1/movie/{id}':
     get:
       summary: 'Show movie details.'
       operationId: showMovieDetails
@@ -334,6 +366,23 @@ paths:
                     created_at: '2023-06-17T19:46:10.000000Z'
                     updated_at: '2023-06-17T21:14:15.000000Z'
                     deleted_at: null
+                    comment:
+                      -
+                        id: 5
+                        movie_id: 3
+                        user_email: test1@gmail.com
+                        comment: 'This movie is really good'
+                        created_at: '2023-06-18T08:02:40.000000Z'
+                        updated_at: '2023-06-18T08:02:40.000000Z'
+                        deleted_at: null
+                      -
+                        id: 14
+                        movie_id: 3
+                        user_email: ronny.jones@example.org
+                        comment: 'Vero similique ipsum voluptatem qui quo.'
+                        created_at: '2023-06-18T16:11:09.000000Z'
+                        updated_at: '2023-06-18T16:11:09.000000Z'
+                        deleted_at: null
                     relatedMovies:
                       '1':
                         id: 4
@@ -490,6 +539,49 @@ paths:
                       deleted_at:
                         type: string
                         example: null
+                      comment:
+                        type: array
+                        example:
+                          -
+                            id: 5
+                            movie_id: 3
+                            user_email: test1@gmail.com
+                            comment: 'This movie is really good'
+                            created_at: '2023-06-18T08:02:40.000000Z'
+                            updated_at: '2023-06-18T08:02:40.000000Z'
+                            deleted_at: null
+                          -
+                            id: 14
+                            movie_id: 3
+                            user_email: ronny.jones@example.org
+                            comment: 'Vero similique ipsum voluptatem qui quo.'
+                            created_at: '2023-06-18T16:11:09.000000Z'
+                            updated_at: '2023-06-18T16:11:09.000000Z'
+                            deleted_at: null
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 5
+                            movie_id:
+                              type: integer
+                              example: 3
+                            user_email:
+                              type: string
+                              example: test1@gmail.com
+                            comment:
+                              type: string
+                              example: 'This movie is really good'
+                            created_at:
+                              type: string
+                              example: '2023-06-18T08:02:40.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2023-06-18T08:02:40.000000Z'
+                            deleted_at:
+                              type: string
+                              example: null
                       relatedMovies:
                         type: object
                         properties:
@@ -887,7 +979,7 @@ paths:
         required: true
         schema:
           type: integer
-  '/api/movie/{movie}':
+  '/api/v1/movie/{movie}':
     delete:
       summary: 'Delete movies.'
       operationId: deleteMovies
@@ -912,7 +1004,7 @@ paths:
         required: true
         schema:
           type: integer
-  /api/register:
+  /api/v1/register:
     post:
       summary: 'User Registrations.'
       operationId: userRegistrations
@@ -931,21 +1023,21 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: quasi
+                  example: et
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: dahlia06@example.org
+                  example: gisselle.fahey@example.com
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: qX`X5Q)KG9=d
+                  example: 'i?yXNmA_w@-x86}o'
               required:
                 - name
                 - email
                 - password
       security: []
-  /api/login:
+  /api/v1/login:
     post:
       summary: 'User Login.'
       operationId: userLogin
@@ -964,11 +1056,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: ashton09@example.net
+                  example: collins.rosie@example.net
                 password:
                   type: string
                   description: ''
-                  example: quo
+                  example: aut
               required:
                 - email
                 - password
