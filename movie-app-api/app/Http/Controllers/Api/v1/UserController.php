@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,7 +27,7 @@ class UserController extends Controller
      *        password,
      * </aside>
      */
-    public function register(Request $request)
+    public function register(Request $request): JsonResponse
     {
         $request->validate([
             'name' => 'required',
@@ -51,7 +52,7 @@ class UserController extends Controller
      *To operate create, update, delete operation for movies. 
      * You have to login first.
      */
-    public function login(Request $request)
+    public function login(Request $request): JsonResponse
     {
         $credentials = $request->validate([
             'email' => 'required|email',

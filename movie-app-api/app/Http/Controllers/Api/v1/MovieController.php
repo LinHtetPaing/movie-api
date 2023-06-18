@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\v1\MovieCreateRequest;
+use App\Http\Requests\Api\v1\MovieUpdateRequest;
 use App\Models\Movie;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 /**
  * @group Movie Operations.
@@ -17,10 +19,9 @@ class MovieController extends Controller
      *
      * Retrieve all movies
      */
-    public function index()
+    public function index(): JsonResponse
     {
-        $defaultItemPerPage = 5;
-        $movies = Movie::select('id', "title", 'cover_image', 'author', 'imdb_rating')->whereNull('deleted_at')->paginate($defaultItemPerPage);
+        $movies = Movie::select('id', "title", 'cover_image', 'author', 'imdb_rating')->whereNull('deleted_at')->paginate(config('constants.pagination.default_item_per_page'));
         return response()->json(['status' => 'success', 'data' => $movies]);
     }
 
@@ -41,16 +42,8 @@ class MovieController extends Controller
      * 
      * @authenticated
      */
-    public function store(Request $request)
+    public function store(MovieCreateRequest $request): JsonResponse
     {
-        $request->validate([
-            'user_id' => 'required|integer',
-            'title' => 'required',
-            'summary' => 'required',
-            'genres' => 'required',
-            'author' => 'required',
-            'cover_image' => 'mimes:jpg,bmp,png',
-        ]);
         $coverImage = $request->file('cover_image')->store('image');
         $movie = Movie::create([
             'user_id' => $request->user_id,
@@ -76,13 +69,13 @@ class MovieController extends Controller
      * 
      * you can look the detail information about movies
      */
-    public function show(string $movieId)
+    public function show(string $movieId): JsonResponse
     {
         $movie = Movie::find($movieId);
         if ($movie) {
             $relatedMovies = Movie::where('author', $movie->author)->orWhere('genres', $movie->genres)->orWhere('tags', $movie->tags)->orWhere('imdb_rating', $movie->imdb_rating)->get();
             $movie["comment"] = $movie->comment;
-            $movie["relatedMovies"] = collect($relatedMovies)->where('id', "!=", $movieId);
+            $movie["related_movies"] = collect($relatedMovies)->where('id', "!=", $movieId)->take(config("constants.related_movies_max_num"));
             return response()->json(['status' => true, 'data' => $movie, 'message' => 'retrieved successfully'], 200);
         } else {
             return response()->json(["status" => false, 'message' => 'There is no data related to request movie id'], 404);
@@ -106,15 +99,8 @@ class MovieController extends Controller
      * 
      * @authenticated
      */
-    public function update(Request $request, string $movieId)
+    public function update(MovieUpdateRequest $request, string $movieId): JsonResponse
     {
-        $request->validate([
-            'title' => 'string',
-            'summary' => 'string',
-            'genres' => 'string',
-            'author' => 'string',
-        ]);
-
         $movie = Movie::find($movieId);
         if ($movie) {
             $movie->title = $request->title ?? $movie->title;
@@ -140,7 +126,7 @@ class MovieController extends Controller
      * 
      * @authenticated
      */
-    public function destroy(string $movieId)
+    public function destroy(string $movieId): JsonResponse
     {
         $movie = Movie::find($movieId);
         if ($movie) {
