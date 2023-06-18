@@ -16,6 +16,12 @@
    10. Run `php artisan db:seed`
    11. Run `php artisan serve`
 
+# For generating api docs using Scribe
+   1. Run `composer require --dev knuckleswtf/scribe`
+   2. Run `php artisan vendor:publish --tag=scribe-config`
+   3. To generate docs page run `php artisan scribe:generate`
+   you can learn more information at [Scribe](URL "https://scribe.knuckles.wtf/laravel/getting-started")
+
 # Functions you can do
     • User can login
     • Login user can create movies 
