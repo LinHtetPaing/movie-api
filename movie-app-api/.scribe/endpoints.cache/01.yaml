@@ -6,7 +6,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/movie
+    uri: api/v1/movie
     metadata:
       groupName: 'Movie Operations.'
       groupDescription: ''
@@ -29,7 +29,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"status":"success","data":{"current_page":1,"data":[{"id":3,"title":"Superman","cover_image":null,"author":"Cyrus Voris, Ethan Reiff","imdb_rating":0},{"id":4,"title":"Kung Fu Panda","cover_image":null,"author":"Cyrus Voris, Ethan Reiff","imdb_rating":0},{"id":5,"title":"Kung Fu Panda","cover_image":null,"author":"Cyrus Voris, Ethan Reiff","imdb_rating":0},{"id":6,"title":"Kung Fu Panda","cover_image":null,"author":"Cyrus Voris, Ethan Reiff","imdb_rating":0},{"id":7,"title":"John","cover_image":null,"author":"Cyrus Voris, Ethan Reiff","imdb_rating":0}],"first_page_url":"http:\/\/127.0.0.1:8000\/api\/movie?page=1","from":1,"last_page":2,"last_page_url":"http:\/\/127.0.0.1:8000\/api\/movie?page=2","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/movie?page=1","label":"1","active":true},{"url":"http:\/\/127.0.0.1:8000\/api\/movie?page=2","label":"2","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/movie?page=2","label":"Next &raquo;","active":false}],"next_page_url":"http:\/\/127.0.0.1:8000\/api\/movie?page=2","path":"http:\/\/127.0.0.1:8000\/api\/movie","per_page":5,"prev_page_url":null,"to":5,"total":10}}'
+        content: '{"status":"success","data":{"current_page":1,"data":[{"id":3,"title":"Superman","cover_image":null,"author":"Cyrus Voris, Ethan Reiff","imdb_rating":0},{"id":4,"title":"Kung Fu Panda","cover_image":null,"author":"Cyrus Voris, Ethan Reiff","imdb_rating":0},{"id":5,"title":"Kung Fu Panda","cover_image":null,"author":"Cyrus Voris, Ethan Reiff","imdb_rating":0},{"id":6,"title":"Kung Fu Panda","cover_image":null,"author":"Cyrus Voris, Ethan Reiff","imdb_rating":0},{"id":7,"title":"John","cover_image":null,"author":"Cyrus Voris, Ethan Reiff","imdb_rating":0}],"first_page_url":"http:\/\/127.0.0.1:8000\/api\/v1\/movie?page=1","from":1,"last_page":6,"last_page_url":"http:\/\/127.0.0.1:8000\/api\/v1\/movie?page=6","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/movie?page=1","label":"1","active":true},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/movie?page=2","label":"2","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/movie?page=3","label":"3","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/movie?page=4","label":"4","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/movie?page=5","label":"5","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/movie?page=6","label":"6","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/movie?page=2","label":"Next &raquo;","active":false}],"next_page_url":"http:\/\/127.0.0.1:8000\/api\/v1\/movie?page=2","path":"http:\/\/127.0.0.1:8000\/api\/v1\/movie","per_page":5,"prev_page_url":null,"to":5,"total":29}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -47,7 +47,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/movie/{id}'
+    uri: 'api/v1/movie/{id}'
     metadata:
       groupName: 'Movie Operations.'
       groupDescription: ''
@@ -78,7 +78,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"status":true,"data":{"id":3,"user_id":2,"title":"Superman","summary":"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung","cover_image":null,"genres":"Action, Commic","author":"Cyrus Voris, Ethan Reiff","tags":"","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-17T19:46:10.000000Z","updated_at":"2023-06-17T21:14:15.000000Z","deleted_at":null,"relatedMovies":{"1":{"id":4,"user_id":2,"title":"Kung Fu Panda","summary":"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung","cover_image":null,"genres":"Action, Comedy","author":"Cyrus Voris, Ethan Reiff","tags":"","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-17T19:47:18.000000Z","updated_at":"2023-06-17T19:47:18.000000Z","deleted_at":null},"2":{"id":5,"user_id":2,"title":"Kung Fu Panda","summary":"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung","cover_image":null,"genres":"Action, Comedy","author":"Cyrus Voris, Ethan Reiff","tags":"","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-17T19:48:03.000000Z","updated_at":"2023-06-17T19:48:03.000000Z","deleted_at":null},"3":{"id":6,"user_id":2,"title":"Kung Fu Panda","summary":"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung","cover_image":null,"genres":"Action, Comedy","author":"Cyrus Voris, Ethan Reiff","tags":"","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-17T19:50:29.000000Z","updated_at":"2023-06-17T19:50:29.000000Z","deleted_at":null},"4":{"id":7,"user_id":2,"title":"John","summary":"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung","cover_image":null,"genres":"Action, Comedy Updated","author":"Cyrus Voris, Ethan Reiff","tags":"","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-17T19:53:02.000000Z","updated_at":"2023-06-17T20:52:15.000000Z","deleted_at":null},"5":{"id":10,"user_id":1,"title":"Big Bang Theory","summary":"This is big bang theory","cover_image":"\/tmp\/phptC8pU2","genres":"Tragedy","author":"Justin","tags":"popular","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-18T09:29:46.000000Z","updated_at":"2023-06-18T09:29:46.000000Z","deleted_at":null},"6":{"id":11,"user_id":1,"title":"Big Bang Theory","summary":"This is big bang theory","cover_image":"\/tmp\/phpBTA825","genres":"Tragedy","author":"Justin","tags":"popular","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-18T09:30:07.000000Z","updated_at":"2023-06-18T09:30:07.000000Z","deleted_at":null},"7":{"id":14,"user_id":2,"title":"Big Bang Theory","summary":"This is big bang theory","cover_image":"image\/DlSReit5NksAMTjXVvY14N64dCCFEC8111NvaN8m.jpg","genres":"Tragedy","author":"Justin","tags":"popular","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-18T09:35:52.000000Z","updated_at":"2023-06-18T09:35:52.000000Z","deleted_at":null}}},"message":"retrieved successfully"}'
+        content: '{"status":true,"data":{"id":3,"user_id":2,"title":"Superman","summary":"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung","cover_image":null,"genres":"Action, Commic","author":"Cyrus Voris, Ethan Reiff","tags":"","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-17T19:46:10.000000Z","updated_at":"2023-06-17T21:14:15.000000Z","deleted_at":null,"comment":[{"id":5,"movie_id":3,"user_email":"test1@gmail.com","comment":"This movie is really good","created_at":"2023-06-18T08:02:40.000000Z","updated_at":"2023-06-18T08:02:40.000000Z","deleted_at":null},{"id":14,"movie_id":3,"user_email":"ronny.jones@example.org","comment":"Vero similique ipsum voluptatem qui quo.","created_at":"2023-06-18T16:11:09.000000Z","updated_at":"2023-06-18T16:11:09.000000Z","deleted_at":null}],"relatedMovies":{"1":{"id":4,"user_id":2,"title":"Kung Fu Panda","summary":"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung","cover_image":null,"genres":"Action, Comedy","author":"Cyrus Voris, Ethan Reiff","tags":"","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-17T19:47:18.000000Z","updated_at":"2023-06-17T19:47:18.000000Z","deleted_at":null},"2":{"id":5,"user_id":2,"title":"Kung Fu Panda","summary":"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung","cover_image":null,"genres":"Action, Comedy","author":"Cyrus Voris, Ethan Reiff","tags":"","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-17T19:48:03.000000Z","updated_at":"2023-06-17T19:48:03.000000Z","deleted_at":null},"3":{"id":6,"user_id":2,"title":"Kung Fu Panda","summary":"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung","cover_image":null,"genres":"Action, Comedy","author":"Cyrus Voris, Ethan Reiff","tags":"","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-17T19:50:29.000000Z","updated_at":"2023-06-17T19:50:29.000000Z","deleted_at":null},"4":{"id":7,"user_id":2,"title":"John","summary":"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung","cover_image":null,"genres":"Action, Comedy Updated","author":"Cyrus Voris, Ethan Reiff","tags":"","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-17T19:53:02.000000Z","updated_at":"2023-06-17T20:52:15.000000Z","deleted_at":null},"5":{"id":10,"user_id":1,"title":"Big Bang Theory","summary":"This is big bang theory","cover_image":"\/tmp\/phptC8pU2","genres":"Tragedy","author":"Justin","tags":"popular","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-18T09:29:46.000000Z","updated_at":"2023-06-18T09:29:46.000000Z","deleted_at":null},"6":{"id":11,"user_id":1,"title":"Big Bang Theory","summary":"This is big bang theory","cover_image":"\/tmp\/phpBTA825","genres":"Tragedy","author":"Justin","tags":"popular","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-18T09:30:07.000000Z","updated_at":"2023-06-18T09:30:07.000000Z","deleted_at":null},"7":{"id":14,"user_id":2,"title":"Big Bang Theory","summary":"This is big bang theory","cover_image":"image\/DlSReit5NksAMTjXVvY14N64dCCFEC8111NvaN8m.jpg","genres":"Tragedy","author":"Justin","tags":"popular","imdb_rating":0,"pdf_download_link":null,"related_movies":"{}","created_at":"2023-06-18T09:35:52.000000Z","updated_at":"2023-06-18T09:35:52.000000Z","deleted_at":null}}},"message":"retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -96,7 +96,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/movie
+    uri: api/v1/movie
     metadata:
       groupName: 'Movie Operations.'
       groupDescription: ''
@@ -194,7 +194,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer d1cva3fVah45EbkPeDg668Z'
+      - 'Bearer Pchb6E1DaV4evZ6g85dak3f'
     controller: null
     method: null
     route: null
@@ -202,7 +202,7 @@ endpoints:
   -
     httpMethods:
       - PUT
-    uri: 'api/movie/{id}'
+    uri: 'api/v1/movie/{id}'
     metadata:
       groupName: 'Movie Operations.'
       groupDescription: ''
@@ -308,7 +308,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer eDf16536dgaVkvPZEb8hac4'
+      - 'Bearer 3Pg8b1Vafad6eEc4vZk5h6D'
     controller: null
     method: null
     route: null
@@ -316,7 +316,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/movie/{movie}'
+    uri: 'api/v1/movie/{movie}'
     metadata:
       groupName: 'Movie Operations.'
       groupDescription: ''
@@ -350,7 +350,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bvfga561VP4DZedhca836Ek'
+      - 'Bearer kd3ea1vP8EcfDh5bV6aZ46g'
     controller: null
     method: null
     route: null

@@ -4,7 +4,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/register
+    uri: api/v1/register
     metadata:
       groupName: 'User Authentication.'
       groupDescription: ''
@@ -34,27 +34,27 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: quasi
+        example: et
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: dahlia06@example.org
+        example: gisselle.fahey@example.com
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 6 characters.'
         required: true
-        example: qX`X5Q)KG9=d
+        example: 'i?yXNmA_w@-x86}o'
         type: string
         custom: []
     cleanBodyParameters:
-      name: quasi
-      email: dahlia06@example.org
-      password: qX`X5Q)KG9=d
+      name: et
+      email: gisselle.fahey@example.com
+      password: 'i?yXNmA_w@-x86}o'
     fileParameters: []
     responses: []
     responseFields: []
@@ -66,7 +66,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/login
+    uri: api/v1/login
     metadata:
       groupName: 'User Authentication.'
       groupDescription: ''
@@ -90,19 +90,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: ashton09@example.net
+        example: collins.rosie@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: quo
+        example: aut
         type: string
         custom: []
     cleanBodyParameters:
-      email: ashton09@example.net
-      password: quo
+      email: collins.rosie@example.net
+      password: aut
     fileParameters: []
     responses: []
     responseFields: []

@@ -71,8 +71,8 @@
                     <a href="#movie-commenting">Movie Commenting.</a>
                 </li>
                                     <ul id="tocify-subheader-movie-commenting" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="movie-commenting-POSTapi-comment">
-                                <a href="#movie-commenting-POSTapi-comment">Create comment.</a>
+                                                    <li class="tocify-item level-2" data-unique="movie-commenting-POSTapi-v1-comment">
+                                <a href="#movie-commenting-POSTapi-v1-comment">Create comment.</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -81,20 +81,20 @@
                     <a href="#movie-operations">Movie Operations.</a>
                 </li>
                                     <ul id="tocify-subheader-movie-operations" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="movie-operations-GETapi-movie">
-                                <a href="#movie-operations-GETapi-movie">Get all movies.</a>
+                                                    <li class="tocify-item level-2" data-unique="movie-operations-GETapi-v1-movie">
+                                <a href="#movie-operations-GETapi-v1-movie">Get all movies.</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="movie-operations-GETapi-movie--id-">
-                                <a href="#movie-operations-GETapi-movie--id-">Show movie details.</a>
+                                                                                <li class="tocify-item level-2" data-unique="movie-operations-GETapi-v1-movie--id-">
+                                <a href="#movie-operations-GETapi-v1-movie--id-">Show movie details.</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="movie-operations-POSTapi-movie">
-                                <a href="#movie-operations-POSTapi-movie">Creating Movies.</a>
+                                                                                <li class="tocify-item level-2" data-unique="movie-operations-POSTapi-v1-movie">
+                                <a href="#movie-operations-POSTapi-v1-movie">Creating Movies.</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="movie-operations-PUTapi-movie--id-">
-                                <a href="#movie-operations-PUTapi-movie--id-">Edit movies.</a>
+                                                                                <li class="tocify-item level-2" data-unique="movie-operations-PUTapi-v1-movie--id-">
+                                <a href="#movie-operations-PUTapi-v1-movie--id-">Edit movies.</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="movie-operations-DELETEapi-movie--movie-">
-                                <a href="#movie-operations-DELETEapi-movie--movie-">Delete movies.</a>
+                                                                                <li class="tocify-item level-2" data-unique="movie-operations-DELETEapi-v1-movie--movie-">
+                                <a href="#movie-operations-DELETEapi-v1-movie--movie-">Delete movies.</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -103,11 +103,11 @@
                     <a href="#user-authentication">User Authentication.</a>
                 </li>
                                     <ul id="tocify-subheader-user-authentication" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="user-authentication-POSTapi-register">
-                                <a href="#user-authentication-POSTapi-register">User Registrations.</a>
+                                                    <li class="tocify-item level-2" data-unique="user-authentication-POSTapi-v1-register">
+                                <a href="#user-authentication-POSTapi-v1-register">User Registrations.</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="user-authentication-POSTapi-login">
-                                <a href="#user-authentication-POSTapi-login">User Login.</a>
+                                                                                <li class="tocify-item level-2" data-unique="user-authentication-POSTapi-v1-login">
+                                <a href="#user-authentication-POSTapi-v1-login">User Login.</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -145,20 +145,20 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     
 
-                                <h2 id="movie-commenting-POSTapi-comment">Create comment.</h2>
+                                <h2 id="movie-commenting-POSTapi-v1-comment">Create comment.</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-comment">
+<span id="example-requests-POSTapi-v1-comment">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/comment" \
+    "http://127.0.0.1:8000/api/v1/comment" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -171,7 +171,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/comment"
+    "http://127.0.0.1:8000/api/v1/comment"
 );
 
 const headers = {
@@ -193,45 +193,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-POSTapi-comment">
+<span id="example-responses-POSTapi-v1-comment">
 </span>
-<span id="execution-results-POSTapi-comment" hidden>
+<span id="execution-results-POSTapi-v1-comment" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-comment"></span>:
+                id="execution-response-status-POSTapi-v1-comment"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-comment"
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-comment"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-comment" hidden>
+<span id="execution-error-POSTapi-v1-comment" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-comment">
+    <pre><code id="execution-error-message-POSTapi-v1-comment">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-comment" data-method="POST"
-      data-path="api/comment"
+<form id="form-POSTapi-v1-comment" data-method="POST"
+      data-path="api/v1/comment"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-comment', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-comment', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-comment"
-                    onclick="tryItOut('POSTapi-comment');">Try it out ⚡
+                    id="btn-tryout-POSTapi-v1-comment"
+                    onclick="tryItOut('POSTapi-v1-comment');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-comment"
-                    onclick="cancelTryOut('POSTapi-comment');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-v1-comment"
+                    onclick="cancelTryOut('POSTapi-v1-comment');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-comment"
+                    id="btn-executetryout-POSTapi-v1-comment"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -239,7 +239,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
-            <b><code>api/comment</code></b>
+            <b><code>api/v1/comment</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -247,7 +247,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="POSTapi-comment"
+               name="Content-Type"                data-endpoint="POSTapi-v1-comment"
                value="application/json"
                data-component="header">
     <br>
@@ -258,7 +258,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Accept"                data-endpoint="POSTapi-comment"
+               name="Accept"                data-endpoint="POSTapi-v1-comment"
                value="application/json"
                data-component="header">
     <br>
@@ -270,7 +270,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="user_email"                data-endpoint="POSTapi-comment"
+               name="user_email"                data-endpoint="POSTapi-v1-comment"
                value="test1@gmail.com"
                data-component="body">
     <br>
@@ -281,7 +281,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="comment"                data-endpoint="POSTapi-comment"
+               name="comment"                data-endpoint="POSTapi-v1-comment"
                value="This is comment
 
 !anyone can create movie's comments"
@@ -295,7 +295,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               name="movie_id"                data-endpoint="POSTapi-comment"
+               name="movie_id"                data-endpoint="POSTapi-v1-comment"
                value="15"
                data-component="body">
     <br>
@@ -307,27 +307,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                                <h2 id="movie-operations-GETapi-movie">Get all movies.</h2>
+                                <h2 id="movie-operations-GETapi-v1-movie">Get all movies.</h2>
 
 <p>
 </p>
 
 <p>Retrieve all movies</p>
 
-<span id="example-requests-GETapi-movie">
+<span id="example-requests-GETapi-v1-movie">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/movie" \
+    --get "http://127.0.0.1:8000/api/v1/movie" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/movie"
+    "http://127.0.0.1:8000/api/v1/movie"
 );
 
 const headers = {
@@ -342,7 +342,7 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-movie">
+<span id="example-responses-GETapi-v1-movie">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
@@ -398,10 +398,10 @@ access-control-allow-origin: *
                 &quot;imdb_rating&quot;: 0
             }
         ],
-        &quot;first_page_url&quot;: &quot;http://127.0.0.1:8000/api/movie?page=1&quot;,
+        &quot;first_page_url&quot;: &quot;http://127.0.0.1:8000/api/v1/movie?page=1&quot;,
         &quot;from&quot;: 1,
-        &quot;last_page&quot;: 2,
-        &quot;last_page_url&quot;: &quot;http://127.0.0.1:8000/api/movie?page=2&quot;,
+        &quot;last_page&quot;: 6,
+        &quot;last_page_url&quot;: &quot;http://127.0.0.1:8000/api/v1/movie?page=6&quot;,
         &quot;links&quot;: [
             {
                 &quot;url&quot;: null,
@@ -409,68 +409,88 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/movie?page=1&quot;,
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/v1/movie?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/movie?page=2&quot;,
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/v1/movie?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/movie?page=2&quot;,
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/v1/movie?page=3&quot;,
+                &quot;label&quot;: &quot;3&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/v1/movie?page=4&quot;,
+                &quot;label&quot;: &quot;4&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/v1/movie?page=5&quot;,
+                &quot;label&quot;: &quot;5&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/v1/movie?page=6&quot;,
+                &quot;label&quot;: &quot;6&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:8000/api/v1/movie?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;active&quot;: false
             }
         ],
-        &quot;next_page_url&quot;: &quot;http://127.0.0.1:8000/api/movie?page=2&quot;,
-        &quot;path&quot;: &quot;http://127.0.0.1:8000/api/movie&quot;,
+        &quot;next_page_url&quot;: &quot;http://127.0.0.1:8000/api/v1/movie?page=2&quot;,
+        &quot;path&quot;: &quot;http://127.0.0.1:8000/api/v1/movie&quot;,
         &quot;per_page&quot;: 5,
         &quot;prev_page_url&quot;: null,
         &quot;to&quot;: 5,
-        &quot;total&quot;: 10
+        &quot;total&quot;: 29
     }
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-movie" hidden>
+<span id="execution-results-GETapi-v1-movie" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-movie"></span>:
+                id="execution-response-status-GETapi-v1-movie"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-movie"
+    <pre class="json"><code id="execution-response-content-GETapi-v1-movie"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-movie" hidden>
+<span id="execution-error-GETapi-v1-movie" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-movie">
+    <pre><code id="execution-error-message-GETapi-v1-movie">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-movie" data-method="GET"
-      data-path="api/movie"
+<form id="form-GETapi-v1-movie" data-method="GET"
+      data-path="api/v1/movie"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-movie', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-movie', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-movie"
-                    onclick="tryItOut('GETapi-movie');">Try it out ⚡
+                    id="btn-tryout-GETapi-v1-movie"
+                    onclick="tryItOut('GETapi-v1-movie');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-movie"
-                    onclick="cancelTryOut('GETapi-movie');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-v1-movie"
+                    onclick="cancelTryOut('GETapi-v1-movie');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-movie"
+                    id="btn-executetryout-GETapi-v1-movie"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -478,7 +498,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/movie</code></b>
+            <b><code>api/v1/movie</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -486,7 +506,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="GETapi-movie"
+               name="Content-Type"                data-endpoint="GETapi-v1-movie"
                value="application/json"
                data-component="header">
     <br>
@@ -497,7 +517,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Accept"                data-endpoint="GETapi-movie"
+               name="Accept"                data-endpoint="GETapi-v1-movie"
                value="application/json"
                data-component="header">
     <br>
@@ -505,27 +525,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="movie-operations-GETapi-movie--id-">Show movie details.</h2>
+                    <h2 id="movie-operations-GETapi-v1-movie--id-">Show movie details.</h2>
 
 <p>
 </p>
 
 <p>you can look the detail information about movies</p>
 
-<span id="example-requests-GETapi-movie--id-">
+<span id="example-requests-GETapi-v1-movie--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/movie/3" \
+    --get "http://127.0.0.1:8000/api/v1/movie/3" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/movie/3"
+    "http://127.0.0.1:8000/api/v1/movie/3"
 );
 
 const headers = {
@@ -540,7 +560,7 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-movie--id-">
+<span id="example-responses-GETapi-v1-movie--id-">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
@@ -572,6 +592,26 @@ access-control-allow-origin: *
         &quot;created_at&quot;: &quot;2023-06-17T19:46:10.000000Z&quot;,
         &quot;updated_at&quot;: &quot;2023-06-17T21:14:15.000000Z&quot;,
         &quot;deleted_at&quot;: null,
+        &quot;comment&quot;: [
+            {
+                &quot;id&quot;: 5,
+                &quot;movie_id&quot;: 3,
+                &quot;user_email&quot;: &quot;test1@gmail.com&quot;,
+                &quot;comment&quot;: &quot;This movie is really good&quot;,
+                &quot;created_at&quot;: &quot;2023-06-18T08:02:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2023-06-18T08:02:40.000000Z&quot;,
+                &quot;deleted_at&quot;: null
+            },
+            {
+                &quot;id&quot;: 14,
+                &quot;movie_id&quot;: 3,
+                &quot;user_email&quot;: &quot;ronny.jones@example.org&quot;,
+                &quot;comment&quot;: &quot;Vero similique ipsum voluptatem qui quo.&quot;,
+                &quot;created_at&quot;: &quot;2023-06-18T16:11:09.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2023-06-18T16:11:09.000000Z&quot;,
+                &quot;deleted_at&quot;: null
+            }
+        ],
         &quot;relatedMovies&quot;: {
             &quot;1&quot;: {
                 &quot;id&quot;: 4,
@@ -691,43 +731,43 @@ access-control-allow-origin: *
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-movie--id-" hidden>
+<span id="execution-results-GETapi-v1-movie--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-movie--id-"></span>:
+                id="execution-response-status-GETapi-v1-movie--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-movie--id-"
+    <pre class="json"><code id="execution-response-content-GETapi-v1-movie--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-movie--id-" hidden>
+<span id="execution-error-GETapi-v1-movie--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-movie--id-">
+    <pre><code id="execution-error-message-GETapi-v1-movie--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-movie--id-" data-method="GET"
-      data-path="api/movie/{id}"
+<form id="form-GETapi-v1-movie--id-" data-method="GET"
+      data-path="api/v1/movie/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-movie--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-movie--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-movie--id-"
-                    onclick="tryItOut('GETapi-movie--id-');">Try it out ⚡
+                    id="btn-tryout-GETapi-v1-movie--id-"
+                    onclick="tryItOut('GETapi-v1-movie--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-movie--id-"
-                    onclick="cancelTryOut('GETapi-movie--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-v1-movie--id-"
+                    onclick="cancelTryOut('GETapi-v1-movie--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-movie--id-"
+                    id="btn-executetryout-GETapi-v1-movie--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -735,7 +775,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/movie/{id}</code></b>
+            <b><code>api/v1/movie/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -743,7 +783,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="GETapi-movie--id-"
+               name="Content-Type"                data-endpoint="GETapi-v1-movie--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -754,7 +794,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Accept"                data-endpoint="GETapi-movie--id-"
+               name="Accept"                data-endpoint="GETapi-v1-movie--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -766,7 +806,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               name="id"                data-endpoint="GETapi-movie--id-"
+               name="id"                data-endpoint="GETapi-v1-movie--id-"
                value="3"
                data-component="url">
     <br>
@@ -774,7 +814,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="movie-operations-POSTapi-movie">Creating Movies.</h2>
+                    <h2 id="movie-operations-POSTapi-v1-movie">Creating Movies.</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -782,13 +822,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <p>!Just login user can create movies</p>
 
-<span id="example-requests-POSTapi-movie">
+<span id="example-requests-POSTapi-v1-movie">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/movie" \
+    "http://127.0.0.1:8000/api/v1/movie" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -800,12 +840,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "tags=popular" \
     --form "imdb_rating=3" \
     --form "pdf_download_link=popular" \
-    --form "cover_image=@/tmp/phpPu1FYJ" </code></pre></div>
+    --form "cover_image=@/tmp/phpbW4J63" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/movie"
+    "http://127.0.0.1:8000/api/v1/movie"
 );
 
 const headers = {
@@ -833,45 +873,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-POSTapi-movie">
+<span id="example-responses-POSTapi-v1-movie">
 </span>
-<span id="execution-results-POSTapi-movie" hidden>
+<span id="execution-results-POSTapi-v1-movie" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-movie"></span>:
+                id="execution-response-status-POSTapi-v1-movie"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-movie"
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-movie"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-movie" hidden>
+<span id="execution-error-POSTapi-v1-movie" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-movie">
+    <pre><code id="execution-error-message-POSTapi-v1-movie">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-movie" data-method="POST"
-      data-path="api/movie"
+<form id="form-POSTapi-v1-movie" data-method="POST"
+      data-path="api/v1/movie"
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-movie', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-movie', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-movie"
-                    onclick="tryItOut('POSTapi-movie');">Try it out ⚡
+                    id="btn-tryout-POSTapi-v1-movie"
+                    onclick="tryItOut('POSTapi-v1-movie');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-movie"
-                    onclick="cancelTryOut('POSTapi-movie');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-v1-movie"
+                    onclick="cancelTryOut('POSTapi-v1-movie');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-movie"
+                    id="btn-executetryout-POSTapi-v1-movie"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -879,7 +919,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
-            <b><code>api/movie</code></b>
+            <b><code>api/v1/movie</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -887,7 +927,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Authorization" class="auth-value"               data-endpoint="POSTapi-movie"
+               name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-movie"
                value="Bearer {ACCESS_TOKEN}"
                data-component="header">
     <br>
@@ -898,7 +938,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="POSTapi-movie"
+               name="Content-Type"                data-endpoint="POSTapi-v1-movie"
                value="multipart/form-data"
                data-component="header">
     <br>
@@ -909,7 +949,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Accept"                data-endpoint="POSTapi-movie"
+               name="Accept"                data-endpoint="POSTapi-v1-movie"
                value="application/json"
                data-component="header">
     <br>
@@ -921,7 +961,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               name="user_id"                data-endpoint="POSTapi-movie"
+               name="user_id"                data-endpoint="POSTapi-v1-movie"
                value="9"
                data-component="body">
     <br>
@@ -932,7 +972,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="title"                data-endpoint="POSTapi-movie"
+               name="title"                data-endpoint="POSTapi-v1-movie"
                value="KungFu Panda"
                data-component="body">
     <br>
@@ -943,7 +983,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="summary"                data-endpoint="POSTapi-movie"
+               name="summary"                data-endpoint="POSTapi-v1-movie"
                value="This is summary of KungFu Panda"
                data-component="body">
     <br>
@@ -954,7 +994,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="genres"                data-endpoint="POSTapi-movie"
+               name="genres"                data-endpoint="POSTapi-v1-movie"
                value="Action"
                data-component="body">
     <br>
@@ -965,7 +1005,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="author"                data-endpoint="POSTapi-movie"
+               name="author"                data-endpoint="POSTapi-v1-movie"
                value="Person"
                data-component="body">
     <br>
@@ -976,18 +1016,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>file</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="file" style="display: none"
-               name="cover_image"                data-endpoint="POSTapi-movie"
+               name="cover_image"                data-endpoint="POSTapi-v1-movie"
                value=""
                data-component="body">
     <br>
-<p>The cover images of movie. Example: <code>/tmp/phpPu1FYJ</code></p>
+<p>The cover images of movie. Example: <code>/tmp/phpbW4J63</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>tags</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-               name="tags"                data-endpoint="POSTapi-movie"
+               name="tags"                data-endpoint="POSTapi-v1-movie"
                value="popular"
                data-component="body">
     <br>
@@ -998,7 +1038,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
-               name="imdb_rating"                data-endpoint="POSTapi-movie"
+               name="imdb_rating"                data-endpoint="POSTapi-v1-movie"
                value="3"
                data-component="body">
     <br>
@@ -1009,7 +1049,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>STRING</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-               name="pdf_download_link"                data-endpoint="POSTapi-movie"
+               name="pdf_download_link"                data-endpoint="POSTapi-v1-movie"
                value="popular"
                data-component="body">
     <br>
@@ -1017,7 +1057,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="movie-operations-PUTapi-movie--id-">Edit movies.</h2>
+                    <h2 id="movie-operations-PUTapi-v1-movie--id-">Edit movies.</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -1025,13 +1065,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <p>!to edit movies you have to login.</p>
 
-<span id="example-requests-PUTapi-movie--id-">
+<span id="example-requests-PUTapi-v1-movie--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://127.0.0.1:8000/api/movie/3" \
+    "http://127.0.0.1:8000/api/v1/movie/3" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -1043,12 +1083,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "tags=popular" \
     --form "imdb_rating=3" \
     --form "pdf_download_link=popular" \
-    --form "cover_image=@/tmp/php3RDvvL" </code></pre></div>
+    --form "cover_image=@/tmp/phpdSaed7" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/movie/3"
+    "http://127.0.0.1:8000/api/v1/movie/3"
 );
 
 const headers = {
@@ -1076,45 +1116,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-PUTapi-movie--id-">
+<span id="example-responses-PUTapi-v1-movie--id-">
 </span>
-<span id="execution-results-PUTapi-movie--id-" hidden>
+<span id="execution-results-PUTapi-v1-movie--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-PUTapi-movie--id-"></span>:
+                id="execution-response-status-PUTapi-v1-movie--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-movie--id-"
+    <pre class="json"><code id="execution-response-content-PUTapi-v1-movie--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-PUTapi-movie--id-" hidden>
+<span id="execution-error-PUTapi-v1-movie--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-movie--id-">
+    <pre><code id="execution-error-message-PUTapi-v1-movie--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-PUTapi-movie--id-" data-method="PUT"
-      data-path="api/movie/{id}"
+<form id="form-PUTapi-v1-movie--id-" data-method="PUT"
+      data-path="api/v1/movie/{id}"
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-movie--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-v1-movie--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-movie--id-"
-                    onclick="tryItOut('PUTapi-movie--id-');">Try it out ⚡
+                    id="btn-tryout-PUTapi-v1-movie--id-"
+                    onclick="tryItOut('PUTapi-v1-movie--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-movie--id-"
-                    onclick="cancelTryOut('PUTapi-movie--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-PUTapi-v1-movie--id-"
+                    onclick="cancelTryOut('PUTapi-v1-movie--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-movie--id-"
+                    id="btn-executetryout-PUTapi-v1-movie--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -1122,7 +1162,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-darkblue">PUT</small>
-            <b><code>api/movie/{id}</code></b>
+            <b><code>api/v1/movie/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -1130,7 +1170,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Authorization" class="auth-value"               data-endpoint="PUTapi-movie--id-"
+               name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-movie--id-"
                value="Bearer {ACCESS_TOKEN}"
                data-component="header">
     <br>
@@ -1141,7 +1181,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="PUTapi-movie--id-"
+               name="Content-Type"                data-endpoint="PUTapi-v1-movie--id-"
                value="multipart/form-data"
                data-component="header">
     <br>
@@ -1152,7 +1192,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Accept"                data-endpoint="PUTapi-movie--id-"
+               name="Accept"                data-endpoint="PUTapi-v1-movie--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1164,7 +1204,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               name="id"                data-endpoint="PUTapi-movie--id-"
+               name="id"                data-endpoint="PUTapi-v1-movie--id-"
                value="3"
                data-component="url">
     <br>
@@ -1176,7 +1216,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="title"                data-endpoint="PUTapi-movie--id-"
+               name="title"                data-endpoint="PUTapi-v1-movie--id-"
                value="KungFu Panda"
                data-component="body">
     <br>
@@ -1187,7 +1227,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="summary"                data-endpoint="PUTapi-movie--id-"
+               name="summary"                data-endpoint="PUTapi-v1-movie--id-"
                value="This is summary of KungFu Panda"
                data-component="body">
     <br>
@@ -1198,7 +1238,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="genres"                data-endpoint="PUTapi-movie--id-"
+               name="genres"                data-endpoint="PUTapi-v1-movie--id-"
                value="Action"
                data-component="body">
     <br>
@@ -1209,7 +1249,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="author"                data-endpoint="PUTapi-movie--id-"
+               name="author"                data-endpoint="PUTapi-v1-movie--id-"
                value="Person"
                data-component="body">
     <br>
@@ -1220,7 +1260,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               name="user_id"                data-endpoint="PUTapi-movie--id-"
+               name="user_id"                data-endpoint="PUTapi-v1-movie--id-"
                value="9"
                data-component="body">
     <br>
@@ -1231,18 +1271,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>file</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="file" style="display: none"
-               name="cover_image"                data-endpoint="PUTapi-movie--id-"
+               name="cover_image"                data-endpoint="PUTapi-v1-movie--id-"
                value=""
                data-component="body">
     <br>
-<p>The cover images of movie. Example: <code>/tmp/php3RDvvL</code></p>
+<p>The cover images of movie. Example: <code>/tmp/phpdSaed7</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>tags</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-               name="tags"                data-endpoint="PUTapi-movie--id-"
+               name="tags"                data-endpoint="PUTapi-v1-movie--id-"
                value="popular"
                data-component="body">
     <br>
@@ -1253,7 +1293,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
-               name="imdb_rating"                data-endpoint="PUTapi-movie--id-"
+               name="imdb_rating"                data-endpoint="PUTapi-v1-movie--id-"
                value="3"
                data-component="body">
     <br>
@@ -1264,7 +1304,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>STRING</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-               name="pdf_download_link"                data-endpoint="PUTapi-movie--id-"
+               name="pdf_download_link"                data-endpoint="PUTapi-v1-movie--id-"
                value="popular"
                data-component="body">
     <br>
@@ -1272,7 +1312,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="movie-operations-DELETEapi-movie--movie-">Delete movies.</h2>
+                    <h2 id="movie-operations-DELETEapi-v1-movie--movie-">Delete movies.</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -1280,13 +1320,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <p>!to delete movies you have to login.</p>
 
-<span id="example-requests-DELETEapi-movie--movie-">
+<span id="example-requests-DELETEapi-v1-movie--movie-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/movie/3" \
+    "http://127.0.0.1:8000/api/v1/movie/3" \
     --header "Authorization: Bearer {ACCESS_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1294,7 +1334,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/movie/3"
+    "http://127.0.0.1:8000/api/v1/movie/3"
 );
 
 const headers = {
@@ -1310,45 +1350,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-DELETEapi-movie--movie-">
+<span id="example-responses-DELETEapi-v1-movie--movie-">
 </span>
-<span id="execution-results-DELETEapi-movie--movie-" hidden>
+<span id="execution-results-DELETEapi-v1-movie--movie-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-DELETEapi-movie--movie-"></span>:
+                id="execution-response-status-DELETEapi-v1-movie--movie-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-DELETEapi-movie--movie-"
+    <pre class="json"><code id="execution-response-content-DELETEapi-v1-movie--movie-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-DELETEapi-movie--movie-" hidden>
+<span id="execution-error-DELETEapi-v1-movie--movie-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETEapi-movie--movie-">
+    <pre><code id="execution-error-message-DELETEapi-v1-movie--movie-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-DELETEapi-movie--movie-" data-method="DELETE"
-      data-path="api/movie/{movie}"
+<form id="form-DELETEapi-v1-movie--movie-" data-method="DELETE"
+      data-path="api/v1/movie/{movie}"
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-movie--movie-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-v1-movie--movie-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-movie--movie-"
-                    onclick="tryItOut('DELETEapi-movie--movie-');">Try it out ⚡
+                    id="btn-tryout-DELETEapi-v1-movie--movie-"
+                    onclick="tryItOut('DELETEapi-v1-movie--movie-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-movie--movie-"
-                    onclick="cancelTryOut('DELETEapi-movie--movie-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-DELETEapi-v1-movie--movie-"
+                    onclick="cancelTryOut('DELETEapi-v1-movie--movie-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-movie--movie-"
+                    id="btn-executetryout-DELETEapi-v1-movie--movie-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -1356,7 +1396,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-red">DELETE</small>
-            <b><code>api/movie/{movie}</code></b>
+            <b><code>api/v1/movie/{movie}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -1364,7 +1404,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Authorization" class="auth-value"               data-endpoint="DELETEapi-movie--movie-"
+               name="Authorization" class="auth-value"               data-endpoint="DELETEapi-v1-movie--movie-"
                value="Bearer {ACCESS_TOKEN}"
                data-component="header">
     <br>
@@ -1375,7 +1415,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="DELETEapi-movie--movie-"
+               name="Content-Type"                data-endpoint="DELETEapi-v1-movie--movie-"
                value="application/json"
                data-component="header">
     <br>
@@ -1386,7 +1426,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Accept"                data-endpoint="DELETEapi-movie--movie-"
+               name="Accept"                data-endpoint="DELETEapi-v1-movie--movie-"
                value="application/json"
                data-component="header">
     <br>
@@ -1398,7 +1438,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               name="movie"                data-endpoint="DELETEapi-movie--movie-"
+               name="movie"                data-endpoint="DELETEapi-v1-movie--movie-"
                value="3"
                data-component="url">
     <br>
@@ -1410,7 +1450,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                                <h2 id="user-authentication-POSTapi-register">User Registrations.</h2>
+                                <h2 id="user-authentication-POSTapi-v1-register">User Registrations.</h2>
 
 <p>
 </p>
@@ -1426,26 +1466,26 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </aside></li>
 </ul>
 
-<span id="example-requests-POSTapi-register">
+<span id="example-requests-POSTapi-v1-register">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/register" \
+    "http://127.0.0.1:8000/api/v1/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"quasi\",
-    \"email\": \"dahlia06@example.org\",
-    \"password\": \"qX`X5Q)KG9=d\"
+    \"name\": \"et\",
+    \"email\": \"gisselle.fahey@example.com\",
+    \"password\": \"i?yXNmA_w@-x86}o\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/register"
+    "http://127.0.0.1:8000/api/v1/register"
 );
 
 const headers = {
@@ -1454,9 +1494,9 @@ const headers = {
 };
 
 let body = {
-    "name": "quasi",
-    "email": "dahlia06@example.org",
-    "password": "qX`X5Q)KG9=d"
+    "name": "et",
+    "email": "gisselle.fahey@example.com",
+    "password": "i?yXNmA_w@-x86}o"
 };
 
 fetch(url, {
@@ -1467,45 +1507,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-POSTapi-register">
+<span id="example-responses-POSTapi-v1-register">
 </span>
-<span id="execution-results-POSTapi-register" hidden>
+<span id="execution-results-POSTapi-v1-register" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-register"></span>:
+                id="execution-response-status-POSTapi-v1-register"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-register"
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-register"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-register" hidden>
+<span id="execution-error-POSTapi-v1-register" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-register">
+    <pre><code id="execution-error-message-POSTapi-v1-register">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-register" data-method="POST"
-      data-path="api/register"
+<form id="form-POSTapi-v1-register" data-method="POST"
+      data-path="api/v1/register"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-register', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-register', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-register"
-                    onclick="tryItOut('POSTapi-register');">Try it out ⚡
+                    id="btn-tryout-POSTapi-v1-register"
+                    onclick="tryItOut('POSTapi-v1-register');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-register"
-                    onclick="cancelTryOut('POSTapi-register');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-v1-register"
+                    onclick="cancelTryOut('POSTapi-v1-register');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-register"
+                    id="btn-executetryout-POSTapi-v1-register"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -1513,7 +1553,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
-            <b><code>api/register</code></b>
+            <b><code>api/v1/register</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -1521,7 +1561,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="POSTapi-register"
+               name="Content-Type"                data-endpoint="POSTapi-v1-register"
                value="application/json"
                data-component="header">
     <br>
@@ -1532,7 +1572,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Accept"                data-endpoint="POSTapi-register"
+               name="Accept"                data-endpoint="POSTapi-v1-register"
                value="application/json"
                data-component="header">
     <br>
@@ -1544,37 +1584,37 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="name"                data-endpoint="POSTapi-register"
-               value="quasi"
+               name="name"                data-endpoint="POSTapi-v1-register"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>quasi</code></p>
+<p>Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="email"                data-endpoint="POSTapi-register"
-               value="dahlia06@example.org"
+               name="email"                data-endpoint="POSTapi-v1-register"
+               value="gisselle.fahey@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>dahlia06@example.org</code></p>
+<p>Must be a valid email address. Example: <code>gisselle.fahey@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="password"                data-endpoint="POSTapi-register"
-               value="qX`X5Q)KG9=d"
+               name="password"                data-endpoint="POSTapi-v1-register"
+               value="i?yXNmA_w@-x86}o"
                data-component="body">
     <br>
-<p>Must be at least 6 characters. Example: <code>qX</code>X5Q)KG9=d`</p>
+<p>Must be at least 6 characters. Example: <code>i?yXNmA_w@-x86}o</code></p>
         </div>
         </form>
 
-                    <h2 id="user-authentication-POSTapi-login">User Login.</h2>
+                    <h2 id="user-authentication-POSTapi-v1-login">User Login.</h2>
 
 <p>
 </p>
@@ -1582,25 +1622,25 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <p>To operate create, update, delete operation for movies.
 You have to login first.</p>
 
-<span id="example-requests-POSTapi-login">
+<span id="example-requests-POSTapi-v1-login">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/login" \
+    "http://127.0.0.1:8000/api/v1/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"ashton09@example.net\",
-    \"password\": \"quo\"
+    \"email\": \"collins.rosie@example.net\",
+    \"password\": \"aut\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/login"
+    "http://127.0.0.1:8000/api/v1/login"
 );
 
 const headers = {
@@ -1609,8 +1649,8 @@ const headers = {
 };
 
 let body = {
-    "email": "ashton09@example.net",
-    "password": "quo"
+    "email": "collins.rosie@example.net",
+    "password": "aut"
 };
 
 fetch(url, {
@@ -1621,45 +1661,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-POSTapi-login">
+<span id="example-responses-POSTapi-v1-login">
 </span>
-<span id="execution-results-POSTapi-login" hidden>
+<span id="execution-results-POSTapi-v1-login" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-login"></span>:
+                id="execution-response-status-POSTapi-v1-login"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-login"
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-login"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-login" hidden>
+<span id="execution-error-POSTapi-v1-login" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-login">
+    <pre><code id="execution-error-message-POSTapi-v1-login">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-login" data-method="POST"
-      data-path="api/login"
+<form id="form-POSTapi-v1-login" data-method="POST"
+      data-path="api/v1/login"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-login', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-login', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-login"
-                    onclick="tryItOut('POSTapi-login');">Try it out ⚡
+                    id="btn-tryout-POSTapi-v1-login"
+                    onclick="tryItOut('POSTapi-v1-login');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-login"
-                    onclick="cancelTryOut('POSTapi-login');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-v1-login"
+                    onclick="cancelTryOut('POSTapi-v1-login');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-login"
+                    id="btn-executetryout-POSTapi-v1-login"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -1667,7 +1707,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
-            <b><code>api/login</code></b>
+            <b><code>api/v1/login</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -1675,7 +1715,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="POSTapi-login"
+               name="Content-Type"                data-endpoint="POSTapi-v1-login"
                value="application/json"
                data-component="header">
     <br>
@@ -1686,7 +1726,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Accept"                data-endpoint="POSTapi-login"
+               name="Accept"                data-endpoint="POSTapi-v1-login"
                value="application/json"
                data-component="header">
     <br>
@@ -1698,22 +1738,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="email"                data-endpoint="POSTapi-login"
-               value="ashton09@example.net"
+               name="email"                data-endpoint="POSTapi-v1-login"
+               value="collins.rosie@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>ashton09@example.net</code></p>
+<p>Must be a valid email address. Example: <code>collins.rosie@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="password"                data-endpoint="POSTapi-login"
-               value="quo"
+               name="password"                data-endpoint="POSTapi-v1-login"
+               value="aut"
                data-component="body">
     <br>
-<p>Example: <code>quo</code></p>
+<p>Example: <code>aut</code></p>
         </div>
         </form>
 
