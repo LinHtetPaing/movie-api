@@ -1,0 +1,470 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/127.0.0.1:8000"
+        }
+    ],
+    "info": {
+        "name": "Movie Api",
+        "_postman_id": "53e6900d-c556-48e7-88cd-844713c2a78b",
+        "description": "This is a code test project and it can operate like movie review api",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Movie Commenting.",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create comment.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/comment",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/comment"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"user_email\":\"test1@gmail.com\",\"comment\":\"This is comment\\n\\n!anyone can create movie's comments\",\"movie_id\":15}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Movie Operations.",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get all movies.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movie",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movie"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Retrieve all movies",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"status\":\"success\",\"data\":{\"current_page\":1,\"data\":[{\"id\":3,\"title\":\"Superman\",\"cover_image\":null,\"author\":\"Cyrus Voris, Ethan Reiff\",\"imdb_rating\":0},{\"id\":4,\"title\":\"Kung Fu Panda\",\"cover_image\":null,\"author\":\"Cyrus Voris, Ethan Reiff\",\"imdb_rating\":0},{\"id\":5,\"title\":\"Kung Fu Panda\",\"cover_image\":null,\"author\":\"Cyrus Voris, Ethan Reiff\",\"imdb_rating\":0},{\"id\":6,\"title\":\"Kung Fu Panda\",\"cover_image\":null,\"author\":\"Cyrus Voris, Ethan Reiff\",\"imdb_rating\":0},{\"id\":7,\"title\":\"John\",\"cover_image\":null,\"author\":\"Cyrus Voris, Ethan Reiff\",\"imdb_rating\":0}],\"first_page_url\":\"http:\\\/\\\/127.0.0.1:8000\\\/api\\\/movie?page=1\",\"from\":1,\"last_page\":2,\"last_page_url\":\"http:\\\/\\\/127.0.0.1:8000\\\/api\\\/movie?page=2\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/127.0.0.1:8000\\\/api\\\/movie?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/127.0.0.1:8000\\\/api\\\/movie?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/127.0.0.1:8000\\\/api\\\/movie?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/127.0.0.1:8000\\\/api\\\/movie?page=2\",\"path\":\"http:\\\/\\\/127.0.0.1:8000\\\/api\\\/movie\",\"per_page\":5,\"prev_page_url\":null,\"to\":5,\"total\":10}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Show movie details.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movie\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movie\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "3",
+                                    "description": "The ID of the movie."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "you can look the detail information about movies",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"status\":true,\"data\":{\"id\":3,\"user_id\":2,\"title\":\"Superman\",\"summary\":\"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung\",\"cover_image\":null,\"genres\":\"Action, Commic\",\"author\":\"Cyrus Voris, Ethan Reiff\",\"tags\":\"\",\"imdb_rating\":0,\"pdf_download_link\":null,\"related_movies\":\"{}\",\"created_at\":\"2023-06-17T19:46:10.000000Z\",\"updated_at\":\"2023-06-17T21:14:15.000000Z\",\"deleted_at\":null,\"relatedMovies\":{\"1\":{\"id\":4,\"user_id\":2,\"title\":\"Kung Fu Panda\",\"summary\":\"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung\",\"cover_image\":null,\"genres\":\"Action, Comedy\",\"author\":\"Cyrus Voris, Ethan Reiff\",\"tags\":\"\",\"imdb_rating\":0,\"pdf_download_link\":null,\"related_movies\":\"{}\",\"created_at\":\"2023-06-17T19:47:18.000000Z\",\"updated_at\":\"2023-06-17T19:47:18.000000Z\",\"deleted_at\":null},\"2\":{\"id\":5,\"user_id\":2,\"title\":\"Kung Fu Panda\",\"summary\":\"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung\",\"cover_image\":null,\"genres\":\"Action, Comedy\",\"author\":\"Cyrus Voris, Ethan Reiff\",\"tags\":\"\",\"imdb_rating\":0,\"pdf_download_link\":null,\"related_movies\":\"{}\",\"created_at\":\"2023-06-17T19:48:03.000000Z\",\"updated_at\":\"2023-06-17T19:48:03.000000Z\",\"deleted_at\":null},\"3\":{\"id\":6,\"user_id\":2,\"title\":\"Kung Fu Panda\",\"summary\":\"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung\",\"cover_image\":null,\"genres\":\"Action, Comedy\",\"author\":\"Cyrus Voris, Ethan Reiff\",\"tags\":\"\",\"imdb_rating\":0,\"pdf_download_link\":null,\"related_movies\":\"{}\",\"created_at\":\"2023-06-17T19:50:29.000000Z\",\"updated_at\":\"2023-06-17T19:50:29.000000Z\",\"deleted_at\":null},\"4\":{\"id\":7,\"user_id\":2,\"title\":\"John\",\"summary\":\"Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung\",\"cover_image\":null,\"genres\":\"Action, Comedy Updated\",\"author\":\"Cyrus Voris, Ethan Reiff\",\"tags\":\"\",\"imdb_rating\":0,\"pdf_download_link\":null,\"related_movies\":\"{}\",\"created_at\":\"2023-06-17T19:53:02.000000Z\",\"updated_at\":\"2023-06-17T20:52:15.000000Z\",\"deleted_at\":null},\"5\":{\"id\":10,\"user_id\":1,\"title\":\"Big Bang Theory\",\"summary\":\"This is big bang theory\",\"cover_image\":\"\\\/tmp\\\/phptC8pU2\",\"genres\":\"Tragedy\",\"author\":\"Justin\",\"tags\":\"popular\",\"imdb_rating\":0,\"pdf_download_link\":null,\"related_movies\":\"{}\",\"created_at\":\"2023-06-18T09:29:46.000000Z\",\"updated_at\":\"2023-06-18T09:29:46.000000Z\",\"deleted_at\":null},\"6\":{\"id\":11,\"user_id\":1,\"title\":\"Big Bang Theory\",\"summary\":\"This is big bang theory\",\"cover_image\":\"\\\/tmp\\\/phpBTA825\",\"genres\":\"Tragedy\",\"author\":\"Justin\",\"tags\":\"popular\",\"imdb_rating\":0,\"pdf_download_link\":null,\"related_movies\":\"{}\",\"created_at\":\"2023-06-18T09:30:07.000000Z\",\"updated_at\":\"2023-06-18T09:30:07.000000Z\",\"deleted_at\":null},\"7\":{\"id\":14,\"user_id\":2,\"title\":\"Big Bang Theory\",\"summary\":\"This is big bang theory\",\"cover_image\":\"image\\\/DlSReit5NksAMTjXVvY14N64dCCFEC8111NvaN8m.jpg\",\"genres\":\"Tragedy\",\"author\":\"Justin\",\"tags\":\"popular\",\"imdb_rating\":0,\"pdf_download_link\":null,\"related_movies\":\"{}\",\"created_at\":\"2023-06-18T09:35:52.000000Z\",\"updated_at\":\"2023-06-18T09:35:52.000000Z\",\"deleted_at\":null}}},\"message\":\"retrieved successfully\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Creating Movies.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movie",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movie"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "user_id",
+                                    "value": 9,
+                                    "type": "text",
+                                    "description": "The id of the user."
+                                },
+                                {
+                                    "key": "title",
+                                    "value": "KungFu Panda",
+                                    "type": "text",
+                                    "description": "The title of the movie."
+                                },
+                                {
+                                    "key": "summary",
+                                    "value": "This is summary of KungFu Panda",
+                                    "type": "text",
+                                    "description": "The summary of the movie."
+                                },
+                                {
+                                    "key": "genres",
+                                    "value": "Action",
+                                    "type": "text",
+                                    "description": "The genres of the movie."
+                                },
+                                {
+                                    "key": "author",
+                                    "value": "Person",
+                                    "type": "text",
+                                    "description": "The author of the movie."
+                                },
+                                {
+                                    "key": "tags",
+                                    "value": "popular",
+                                    "type": "text",
+                                    "description": "The tags of the movie."
+                                },
+                                {
+                                    "key": "imdb_rating",
+                                    "value": 3,
+                                    "type": "text",
+                                    "description": "The IMDB rating of the movie."
+                                },
+                                {
+                                    "key": "pdf_download_link",
+                                    "value": "popular",
+                                    "type": "text",
+                                    "description": "The pdf download link of the movie."
+                                },
+                                {
+                                    "key": "cover_image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "!Just login user can create movies"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Edit movies.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movie\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movie\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "3",
+                                    "description": "The ID of the movie."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "title",
+                                    "value": "KungFu Panda",
+                                    "type": "text",
+                                    "description": "The title of the movie."
+                                },
+                                {
+                                    "key": "summary",
+                                    "value": "This is summary of KungFu Panda",
+                                    "type": "text",
+                                    "description": "The summary of the movie."
+                                },
+                                {
+                                    "key": "genres",
+                                    "value": "Action",
+                                    "type": "text",
+                                    "description": "The genres of the movie."
+                                },
+                                {
+                                    "key": "author",
+                                    "value": "Person",
+                                    "type": "text",
+                                    "description": "The author of the movie."
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": 9,
+                                    "type": "text",
+                                    "description": "The id of the user."
+                                },
+                                {
+                                    "key": "tags",
+                                    "value": "popular",
+                                    "type": "text",
+                                    "description": "The tags of the movie."
+                                },
+                                {
+                                    "key": "imdb_rating",
+                                    "value": 3,
+                                    "type": "text",
+                                    "description": "The IMDB rating of the movie."
+                                },
+                                {
+                                    "key": "pdf_download_link",
+                                    "value": "popular",
+                                    "type": "text",
+                                    "description": "The pdf download link of the movie."
+                                },
+                                {
+                                    "key": "cover_image",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "_method",
+                                    "value": "PUT",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "description": "!to edit movies you have to login."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete movies.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/movie\/:movie",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/movie\/:movie",
+                            "variable": [
+                                {
+                                    "id": "movie",
+                                    "key": "movie",
+                                    "value": "3",
+                                    "description": "The movie."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "!to delete movies you have to login."
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "User Authentication.",
+            "description": "",
+            "item": [
+                {
+                    "name": "User Registrations.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"quasi\",\"email\":\"dahlia06@example.org\",\"password\":\"qX`X5Q)KG9=d\"}"
+                        },
+                        "description": "To operate CRUD operation, you have to register your identity first.\n* This endpoint lets you create a user.\n<aside class=\"notice\">\n     You have to fill the following parameters:\n       name,\n       email,\n       password,\n<\/aside>",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "User Login.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"ashton09@example.net\",\"password\":\"quo\"}"
+                        },
+                        "description": "To operate create, update, delete operation for movies.\nYou have to login first.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "Authorization",
+                "value": null,
+                "type": "string"
+            }
+        ]
+    }
+}

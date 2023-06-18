@@ -1,0 +1,994 @@
+openapi: 3.0.3
+info:
+  title: 'Movie Api'
+  description: 'This is a code test project and it can operate like movie review api'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://127.0.0.1:8000'
+paths:
+  /api/comment:
+    post:
+      summary: 'Create comment.'
+      operationId: createComment
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Movie Commenting.'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_email:
+                  type: string
+                  description: 'The email of the user.'
+                  example: test1@gmail.com
+                comment:
+                  type: string
+                  description: 'The comment of the user.'
+                  example: "This is comment\n\n!anyone can create movie's comments"
+                movie_id:
+                  type: integer
+                  description: 'The id of the movie.'
+                  example: 15
+              required:
+                - user_email
+                - comment
+                - movie_id
+      security: []
+  /api/movie:
+    get:
+      summary: 'Get all movies.'
+      operationId: getAllMovies
+      description: 'Retrieve all movies'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: success
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 3
+                        title: Superman
+                        cover_image: null
+                        author: 'Cyrus Voris, Ethan Reiff'
+                        imdb_rating: 0
+                      -
+                        id: 4
+                        title: 'Kung Fu Panda'
+                        cover_image: null
+                        author: 'Cyrus Voris, Ethan Reiff'
+                        imdb_rating: 0
+                      -
+                        id: 5
+                        title: 'Kung Fu Panda'
+                        cover_image: null
+                        author: 'Cyrus Voris, Ethan Reiff'
+                        imdb_rating: 0
+                      -
+                        id: 6
+                        title: 'Kung Fu Panda'
+                        cover_image: null
+                        author: 'Cyrus Voris, Ethan Reiff'
+                        imdb_rating: 0
+                      -
+                        id: 7
+                        title: John
+                        cover_image: null
+                        author: 'Cyrus Voris, Ethan Reiff'
+                        imdb_rating: 0
+                    first_page_url: 'http://127.0.0.1:8000/api/movie?page=1'
+                    from: 1
+                    last_page: 2
+                    last_page_url: 'http://127.0.0.1:8000/api/movie?page=2'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/movie?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://127.0.0.1:8000/api/movie?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/movie?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: 'http://127.0.0.1:8000/api/movie?page=2'
+                    path: 'http://127.0.0.1:8000/api/movie'
+                    per_page: 5
+                    prev_page_url: null
+                    to: 5
+                    total: 10
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  data:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 3
+                            title: Superman
+                            cover_image: null
+                            author: 'Cyrus Voris, Ethan Reiff'
+                            imdb_rating: 0
+                          -
+                            id: 4
+                            title: 'Kung Fu Panda'
+                            cover_image: null
+                            author: 'Cyrus Voris, Ethan Reiff'
+                            imdb_rating: 0
+                          -
+                            id: 5
+                            title: 'Kung Fu Panda'
+                            cover_image: null
+                            author: 'Cyrus Voris, Ethan Reiff'
+                            imdb_rating: 0
+                          -
+                            id: 6
+                            title: 'Kung Fu Panda'
+                            cover_image: null
+                            author: 'Cyrus Voris, Ethan Reiff'
+                            imdb_rating: 0
+                          -
+                            id: 7
+                            title: John
+                            cover_image: null
+                            author: 'Cyrus Voris, Ethan Reiff'
+                            imdb_rating: 0
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 3
+                            title:
+                              type: string
+                              example: Superman
+                            cover_image:
+                              type: string
+                              example: null
+                            author:
+                              type: string
+                              example: 'Cyrus Voris, Ethan Reiff'
+                            imdb_rating:
+                              type: integer
+                              example: 0
+                      first_page_url:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/movie?page=1'
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 2
+                      last_page_url:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/movie?page=2'
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/movie?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: 'http://127.0.0.1:8000/api/movie?page=2'
+                            label: '2'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/movie?page=2'
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      next_page_url:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/movie?page=2'
+                      path:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/movie'
+                      per_page:
+                        type: integer
+                        example: 5
+                      prev_page_url:
+                        type: string
+                        example: null
+                      to:
+                        type: integer
+                        example: 5
+                      total:
+                        type: integer
+                        example: 10
+      tags:
+        - 'Movie Operations.'
+      security: []
+    post:
+      summary: 'Creating Movies.'
+      operationId: creatingMovies
+      description: '!Just login user can create movies'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Movie Operations.'
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  description: 'The id of the user.'
+                  example: 9
+                title:
+                  type: string
+                  description: 'The title of the movie.'
+                  example: 'KungFu Panda'
+                summary:
+                  type: string
+                  description: 'The summary of the movie.'
+                  example: 'This is summary of KungFu Panda'
+                genres:
+                  type: string
+                  description: 'The genres of the movie.'
+                  example: Action
+                author:
+                  type: string
+                  description: 'The author of the movie.'
+                  example: Person
+                cover_image:
+                  type: string
+                  format: binary
+                  description: 'The cover images of movie.'
+                tags:
+                  type: string
+                  description: 'The tags of the movie.'
+                  example: popular
+                imdb_rating:
+                  type: integer
+                  description: 'The IMDB rating of the movie.'
+                  example: 3
+                pdf_download_link:
+                  type: STRING
+                  description: 'The pdf download link of the movie.'
+                  example: popular
+              required:
+                - user_id
+                - title
+                - summary
+                - genres
+                - author
+  '/api/movie/{id}':
+    get:
+      summary: 'Show movie details.'
+      operationId: showMovieDetails
+      description: 'you can look the detail information about movies'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  data:
+                    id: 3
+                    user_id: 2
+                    title: Superman
+                    summary: 'Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung'
+                    cover_image: null
+                    genres: 'Action, Commic'
+                    author: 'Cyrus Voris, Ethan Reiff'
+                    tags: ''
+                    imdb_rating: 0
+                    pdf_download_link: null
+                    related_movies: '{}'
+                    created_at: '2023-06-17T19:46:10.000000Z'
+                    updated_at: '2023-06-17T21:14:15.000000Z'
+                    deleted_at: null
+                    relatedMovies:
+                      '1':
+                        id: 4
+                        user_id: 2
+                        title: 'Kung Fu Panda'
+                        summary: 'Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung'
+                        cover_image: null
+                        genres: 'Action, Comedy'
+                        author: 'Cyrus Voris, Ethan Reiff'
+                        tags: ''
+                        imdb_rating: 0
+                        pdf_download_link: null
+                        related_movies: '{}'
+                        created_at: '2023-06-17T19:47:18.000000Z'
+                        updated_at: '2023-06-17T19:47:18.000000Z'
+                        deleted_at: null
+                      '2':
+                        id: 5
+                        user_id: 2
+                        title: 'Kung Fu Panda'
+                        summary: 'Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung'
+                        cover_image: null
+                        genres: 'Action, Comedy'
+                        author: 'Cyrus Voris, Ethan Reiff'
+                        tags: ''
+                        imdb_rating: 0
+                        pdf_download_link: null
+                        related_movies: '{}'
+                        created_at: '2023-06-17T19:48:03.000000Z'
+                        updated_at: '2023-06-17T19:48:03.000000Z'
+                        deleted_at: null
+                      '3':
+                        id: 6
+                        user_id: 2
+                        title: 'Kung Fu Panda'
+                        summary: 'Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung'
+                        cover_image: null
+                        genres: 'Action, Comedy'
+                        author: 'Cyrus Voris, Ethan Reiff'
+                        tags: ''
+                        imdb_rating: 0
+                        pdf_download_link: null
+                        related_movies: '{}'
+                        created_at: '2023-06-17T19:50:29.000000Z'
+                        updated_at: '2023-06-17T19:50:29.000000Z'
+                        deleted_at: null
+                      '4':
+                        id: 7
+                        user_id: 2
+                        title: John
+                        summary: 'Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung'
+                        cover_image: null
+                        genres: 'Action, Comedy Updated'
+                        author: 'Cyrus Voris, Ethan Reiff'
+                        tags: ''
+                        imdb_rating: 0
+                        pdf_download_link: null
+                        related_movies: '{}'
+                        created_at: '2023-06-17T19:53:02.000000Z'
+                        updated_at: '2023-06-17T20:52:15.000000Z'
+                        deleted_at: null
+                      '5':
+                        id: 10
+                        user_id: 1
+                        title: 'Big Bang Theory'
+                        summary: 'This is big bang theory'
+                        cover_image: /tmp/phptC8pU2
+                        genres: Tragedy
+                        author: Justin
+                        tags: popular
+                        imdb_rating: 0
+                        pdf_download_link: null
+                        related_movies: '{}'
+                        created_at: '2023-06-18T09:29:46.000000Z'
+                        updated_at: '2023-06-18T09:29:46.000000Z'
+                        deleted_at: null
+                      '6':
+                        id: 11
+                        user_id: 1
+                        title: 'Big Bang Theory'
+                        summary: 'This is big bang theory'
+                        cover_image: /tmp/phpBTA825
+                        genres: Tragedy
+                        author: Justin
+                        tags: popular
+                        imdb_rating: 0
+                        pdf_download_link: null
+                        related_movies: '{}'
+                        created_at: '2023-06-18T09:30:07.000000Z'
+                        updated_at: '2023-06-18T09:30:07.000000Z'
+                        deleted_at: null
+                      '7':
+                        id: 14
+                        user_id: 2
+                        title: 'Big Bang Theory'
+                        summary: 'This is big bang theory'
+                        cover_image: image/DlSReit5NksAMTjXVvY14N64dCCFEC8111NvaN8m.jpg
+                        genres: Tragedy
+                        author: Justin
+                        tags: popular
+                        imdb_rating: 0
+                        pdf_download_link: null
+                        related_movies: '{}'
+                        created_at: '2023-06-18T09:35:52.000000Z'
+                        updated_at: '2023-06-18T09:35:52.000000Z'
+                        deleted_at: null
+                  message: 'retrieved successfully'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 3
+                      user_id:
+                        type: integer
+                        example: 2
+                      title:
+                        type: string
+                        example: Superman
+                      summary:
+                        type: string
+                        example: 'Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung'
+                      cover_image:
+                        type: string
+                        example: null
+                      genres:
+                        type: string
+                        example: 'Action, Commic'
+                      author:
+                        type: string
+                        example: 'Cyrus Voris, Ethan Reiff'
+                      tags:
+                        type: string
+                        example: ''
+                      imdb_rating:
+                        type: integer
+                        example: 0
+                      pdf_download_link:
+                        type: string
+                        example: null
+                      related_movies:
+                        type: string
+                        example: '{}'
+                      created_at:
+                        type: string
+                        example: '2023-06-17T19:46:10.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-06-17T21:14:15.000000Z'
+                      deleted_at:
+                        type: string
+                        example: null
+                      relatedMovies:
+                        type: object
+                        properties:
+                          1:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 4
+                              user_id:
+                                type: integer
+                                example: 2
+                              title:
+                                type: string
+                                example: 'Kung Fu Panda'
+                              summary:
+                                type: string
+                                example: 'Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung'
+                              cover_image:
+                                type: string
+                                example: null
+                              genres:
+                                type: string
+                                example: 'Action, Comedy'
+                              author:
+                                type: string
+                                example: 'Cyrus Voris, Ethan Reiff'
+                              tags:
+                                type: string
+                                example: ''
+                              imdb_rating:
+                                type: integer
+                                example: 0
+                              pdf_download_link:
+                                type: string
+                                example: null
+                              related_movies:
+                                type: string
+                                example: '{}'
+                              created_at:
+                                type: string
+                                example: '2023-06-17T19:47:18.000000Z'
+                              updated_at:
+                                type: string
+                                example: '2023-06-17T19:47:18.000000Z'
+                              deleted_at:
+                                type: string
+                                example: null
+                          2:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 5
+                              user_id:
+                                type: integer
+                                example: 2
+                              title:
+                                type: string
+                                example: 'Kung Fu Panda'
+                              summary:
+                                type: string
+                                example: 'Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung'
+                              cover_image:
+                                type: string
+                                example: null
+                              genres:
+                                type: string
+                                example: 'Action, Comedy'
+                              author:
+                                type: string
+                                example: 'Cyrus Voris, Ethan Reiff'
+                              tags:
+                                type: string
+                                example: ''
+                              imdb_rating:
+                                type: integer
+                                example: 0
+                              pdf_download_link:
+                                type: string
+                                example: null
+                              related_movies:
+                                type: string
+                                example: '{}'
+                              created_at:
+                                type: string
+                                example: '2023-06-17T19:48:03.000000Z'
+                              updated_at:
+                                type: string
+                                example: '2023-06-17T19:48:03.000000Z'
+                              deleted_at:
+                                type: string
+                                example: null
+                          3:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 6
+                              user_id:
+                                type: integer
+                                example: 2
+                              title:
+                                type: string
+                                example: 'Kung Fu Panda'
+                              summary:
+                                type: string
+                                example: 'Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung'
+                              cover_image:
+                                type: string
+                                example: null
+                              genres:
+                                type: string
+                                example: 'Action, Comedy'
+                              author:
+                                type: string
+                                example: 'Cyrus Voris, Ethan Reiff'
+                              tags:
+                                type: string
+                                example: ''
+                              imdb_rating:
+                                type: integer
+                                example: 0
+                              pdf_download_link:
+                                type: string
+                                example: null
+                              related_movies:
+                                type: string
+                                example: '{}'
+                              created_at:
+                                type: string
+                                example: '2023-06-17T19:50:29.000000Z'
+                              updated_at:
+                                type: string
+                                example: '2023-06-17T19:50:29.000000Z'
+                              deleted_at:
+                                type: string
+                                example: null
+                          4:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 7
+                              user_id:
+                                type: integer
+                                example: 2
+                              title:
+                                type: string
+                                example: John
+                              summary:
+                                type: string
+                                example: 'Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. When the villainous snow leopard Tai Lung'
+                              cover_image:
+                                type: string
+                                example: null
+                              genres:
+                                type: string
+                                example: 'Action, Comedy Updated'
+                              author:
+                                type: string
+                                example: 'Cyrus Voris, Ethan Reiff'
+                              tags:
+                                type: string
+                                example: ''
+                              imdb_rating:
+                                type: integer
+                                example: 0
+                              pdf_download_link:
+                                type: string
+                                example: null
+                              related_movies:
+                                type: string
+                                example: '{}'
+                              created_at:
+                                type: string
+                                example: '2023-06-17T19:53:02.000000Z'
+                              updated_at:
+                                type: string
+                                example: '2023-06-17T20:52:15.000000Z'
+                              deleted_at:
+                                type: string
+                                example: null
+                          5:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 10
+                              user_id:
+                                type: integer
+                                example: 1
+                              title:
+                                type: string
+                                example: 'Big Bang Theory'
+                              summary:
+                                type: string
+                                example: 'This is big bang theory'
+                              cover_image:
+                                type: string
+                                example: /tmp/phptC8pU2
+                              genres:
+                                type: string
+                                example: Tragedy
+                              author:
+                                type: string
+                                example: Justin
+                              tags:
+                                type: string
+                                example: popular
+                              imdb_rating:
+                                type: integer
+                                example: 0
+                              pdf_download_link:
+                                type: string
+                                example: null
+                              related_movies:
+                                type: string
+                                example: '{}'
+                              created_at:
+                                type: string
+                                example: '2023-06-18T09:29:46.000000Z'
+                              updated_at:
+                                type: string
+                                example: '2023-06-18T09:29:46.000000Z'
+                              deleted_at:
+                                type: string
+                                example: null
+                          6:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 11
+                              user_id:
+                                type: integer
+                                example: 1
+                              title:
+                                type: string
+                                example: 'Big Bang Theory'
+                              summary:
+                                type: string
+                                example: 'This is big bang theory'
+                              cover_image:
+                                type: string
+                                example: /tmp/phpBTA825
+                              genres:
+                                type: string
+                                example: Tragedy
+                              author:
+                                type: string
+                                example: Justin
+                              tags:
+                                type: string
+                                example: popular
+                              imdb_rating:
+                                type: integer
+                                example: 0
+                              pdf_download_link:
+                                type: string
+                                example: null
+                              related_movies:
+                                type: string
+                                example: '{}'
+                              created_at:
+                                type: string
+                                example: '2023-06-18T09:30:07.000000Z'
+                              updated_at:
+                                type: string
+                                example: '2023-06-18T09:30:07.000000Z'
+                              deleted_at:
+                                type: string
+                                example: null
+                          7:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 14
+                              user_id:
+                                type: integer
+                                example: 2
+                              title:
+                                type: string
+                                example: 'Big Bang Theory'
+                              summary:
+                                type: string
+                                example: 'This is big bang theory'
+                              cover_image:
+                                type: string
+                                example: image/DlSReit5NksAMTjXVvY14N64dCCFEC8111NvaN8m.jpg
+                              genres:
+                                type: string
+                                example: Tragedy
+                              author:
+                                type: string
+                                example: Justin
+                              tags:
+                                type: string
+                                example: popular
+                              imdb_rating:
+                                type: integer
+                                example: 0
+                              pdf_download_link:
+                                type: string
+                                example: null
+                              related_movies:
+                                type: string
+                                example: '{}'
+                              created_at:
+                                type: string
+                                example: '2023-06-18T09:35:52.000000Z'
+                              updated_at:
+                                type: string
+                                example: '2023-06-18T09:35:52.000000Z'
+                              deleted_at:
+                                type: string
+                                example: null
+                  message:
+                    type: string
+                    example: 'retrieved successfully'
+      tags:
+        - 'Movie Operations.'
+      security: []
+    put:
+      summary: 'Edit movies.'
+      operationId: editMovies
+      description: '!to edit movies you have to login.'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Movie Operations.'
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'The title of the movie.'
+                  example: 'KungFu Panda'
+                summary:
+                  type: string
+                  description: 'The summary of the movie.'
+                  example: 'This is summary of KungFu Panda'
+                genres:
+                  type: string
+                  description: 'The genres of the movie.'
+                  example: Action
+                author:
+                  type: string
+                  description: 'The author of the movie.'
+                  example: Person
+                user_id:
+                  type: integer
+                  description: 'The id of the user.'
+                  example: 9
+                cover_image:
+                  type: string
+                  format: binary
+                  description: 'The cover images of movie.'
+                tags:
+                  type: string
+                  description: 'The tags of the movie.'
+                  example: popular
+                imdb_rating:
+                  type: integer
+                  description: 'The IMDB rating of the movie.'
+                  example: 3
+                pdf_download_link:
+                  type: STRING
+                  description: 'The pdf download link of the movie.'
+                  example: popular
+              required:
+                - title
+                - summary
+                - genres
+                - author
+                - user_id
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the movie.'
+        example: 3
+        required: true
+        schema:
+          type: integer
+  '/api/movie/{movie}':
+    delete:
+      summary: 'Delete movies.'
+      operationId: deleteMovies
+      description: '!to delete movies you have to login.'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {ACCESS_TOKEN}'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Movie Operations.'
+    parameters:
+      -
+        in: path
+        name: movie
+        description: 'The movie.'
+        example: 3
+        required: true
+        schema:
+          type: integer
+  /api/register:
+    post:
+      summary: 'User Registrations.'
+      operationId: userRegistrations
+      description: "To operate CRUD operation, you have to register your identity first.\n* This endpoint lets you create a user.\n<aside class=\"notice\">\n     You have to fill the following parameters:\n       name,\n       email,\n       password,\n</aside>"
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Authentication.'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: quasi
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: dahlia06@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 6 characters.'
+                  example: qX`X5Q)KG9=d
+              required:
+                - name
+                - email
+                - password
+      security: []
+  /api/login:
+    post:
+      summary: 'User Login.'
+      operationId: userLogin
+      description: "To operate create, update, delete operation for movies.\nYou have to login first."
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Authentication.'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: ashton09@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: quo
+              required:
+                - email
+                - password
+      security: []
+tags:
+  -
+    name: 'Movie Commenting.'
+    description: ''
+  -
+    name: 'Movie Operations.'
+    description: ''
+  -
+    name: 'User Authentication.'
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: ''
+security:
+  -
+    default: []

@@ -1,0 +1,63 @@
+name: 'Movie Commenting.'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/comment
+    metadata:
+      groupName: 'Movie Commenting.'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create comment.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      user_email:
+        name: user_email
+        description: 'The email of the user.'
+        required: true
+        example: test1@gmail.com
+        type: string
+        custom: []
+      comment:
+        name: comment
+        description: 'The comment of the user.'
+        required: true
+        example: |-
+          This is comment
+
+          !anyone can create movie's comments
+        type: string
+        custom: []
+      movie_id:
+        name: movie_id
+        description: 'The id of the movie.'
+        required: true
+        example: 15
+        type: integer
+        custom: []
+    cleanBodyParameters:
+      user_email: test1@gmail.com
+      comment: |-
+        This is comment
+
+        !anyone can create movie's comments
+      movie_id: 15
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
