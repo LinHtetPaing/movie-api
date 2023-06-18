@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,9 @@ class CommentFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'movie_id' => fake()->numberBetween(1, 4),
+            'user_email' => User::find(fake()->numberBetween(1, 2))->email,
+            'comment' => fake()->sentence()
         ];
     }
 }

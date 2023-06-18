@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,13 +18,13 @@ class MovieFactory extends Factory
     public function definition(): array
     {
         return [
-           "user_id" => fake()->numberBetween(1, 99),
-            "title"  => fake()->title(),
+           "user_id" => User::find(fake()->numberBetween(1, 2))->id,
+            "title"  => fake()->name(),
             "summary" => fake()->sentence(),
             "genres" => "Comedy",
             "author" => fake()->name(),
             "tags" => "movie",
-            "imdb_rating" => "3.5",
+            "imdb_rating" => fake()->numberBetween(1, 5),
             'created_at' => now(),
             'updated_at' => now(),
         ];

@@ -19,7 +19,8 @@ class MovieController extends Controller
      */
     public function index()
     {
-        $movies = Movie::select('id', "title", 'cover_image', 'author', 'imdb_rating')->whereNull('deleted_at')->paginate(5);
+        $defaultItemPerPage = 5;
+        $movies = Movie::select('id', "title", 'cover_image', 'author', 'imdb_rating')->whereNull('deleted_at')->paginate($defaultItemPerPage);
         return response()->json(['status' => 'success', 'data' => $movies]);
     }
 
@@ -66,7 +67,7 @@ class MovieController extends Controller
         if ($movie) {
             return response()->json(['status' => true, 'data' => $movie, 'message' => 'created successfully'], 200);
         } else {
-            return response()->json(['status' => false, 'message' => "Invalid input"], 400);
+            return response()->json(['status' => false, 'message' => "Invalid input"], 404);
         }
     }
 

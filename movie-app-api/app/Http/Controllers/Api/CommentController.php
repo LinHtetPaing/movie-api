@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\Comment;
 use App\Models\Movie;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class CommentController extends Controller
 {
 
     /**
-     * et all comments.
+     * get all comments.
      * 
      * !Retrieve all comments
      */

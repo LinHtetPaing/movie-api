@@ -2,6 +2,10 @@
 
 # Description
    This is a coding test. The user can CRUD operation of movies and comment the movies.
+# Technical requirement for development, 
+   1. Language: PHP >= 8.1
+   2. Framework: Laravel 10
+   3. API Doc: Scribe (https://scribe.knuckles.wtf)
 
 # Quick Setup
    1. Clone this repo `git clone git@github.com:LinHtetPaing/movie-api.git`
@@ -20,7 +24,7 @@
    1. Run `composer require --dev knuckleswtf/scribe`
    2. Run `php artisan vendor:publish --tag=scribe-config`
    3. To generate docs page run `php artisan scribe:generate`
-   you can learn more information at [Scribe](URL "https://scribe.knuckles.wtf/laravel/getting-started")
+   you can learn more information at [Scribe](https://scribe.knuckles.wtf/laravel/getting-started)
 
 # Functions you can do
     • User can login

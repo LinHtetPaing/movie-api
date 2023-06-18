@@ -1,9 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\CommentController;
 use App\Http\Controllers\Api\MovieController;
 use App\Http\Controllers\Api\UserController;
-use App\Http\Controllers\CommentController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
